@@ -1,2 +1,6 @@
 ---
-# vars file for asbrl-postgresql-exporter/
+BUILD: 'v0.8.0'
+PG_HOST: 'localhost'
+PG_PORT: 5432
+PG_USER: ''
+PG_PASS: ''

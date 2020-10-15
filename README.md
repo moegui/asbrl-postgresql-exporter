@@ -18,6 +18,11 @@ Role Variables
 - PG_PORT: 5432
 - PG_USERNAME: ''
 - PG_PASSWORD: ''
+- CONTAINER_NAME: "postgres-exporter"
+- DOCKER_CPU_PERIOD: 0
+- DOCKER_CPU_QUOTA: 0
+- DOCKER_MEMORY: 0
+- CONTAINER_STATE: 'started'
 
 Dependencies
 ------------

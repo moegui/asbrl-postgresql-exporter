@@ -1,13 +1,16 @@
 ---
 - name: PostgreSQL Exporter
   docker_container:
-    name: "postgres-exporter"
+    name: "{{ CONTAINER_NAME }}"
     image: "wrouesnel/postgres_exporter:{{ BUILD }}"
     pull: "yes"
     recreate: "yes"
     env:
       DATA_SOURCE_NAME: "postgresql://{{ PG_USER }}:{{ PG_PASS }}@{{ PG_HOST }}:{{ PG_PORT }}/postgres?sslmode=disable"
-    state: "started"
+    cpu_period: "{{ DOCKER_CPU_PERIOD }}"
+    cpu_quota: "{{ DOCKER_CPU_QUOTA }}"
+    memory: "{{ DOCKER_MEMORY }}"
+    state: "{{ CONTAINER_STATE }}"
     restart_policy: "unless-stopped"
     published_ports:
       - "0.0.0.0:9187:9187"

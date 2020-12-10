@@ -40,7 +40,7 @@ Example Playbook
         PG_USERNAME: "{{ PG_ROOT_USERNAME }}"
         PG_PASSWORD: "{{ PG_ROOT_PASSWORD }}"
       tags:
-        - postgres-exporter
+        - asbrl-postgresql-exporter
 
 License
 -------
